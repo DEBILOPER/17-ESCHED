@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9651930-A8C5-4355-9653-82B2E338E688}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_Sched</RootNamespace>
+    <AssemblyName>E-Sched</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\Bunifu UI Form 1.﻿9.0.1\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\Bunifu UI Form 1.﻿9.0.1\Bunifu UI WinForms 1.9.0.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Drawer">
+      <HintPath>..\..\Bunifu Ui WinForms v1.10.0.0\Bunifu.UI.WinForms.Drawer.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\My Files\Programming Projects\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTab.Designer.cs">
+      <DependentUpon>AddTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirCondition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirCondition.Designer.cs">
+      <DependentUpon>AirCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplyBranch.Designer.cs">
+      <DependentUpon>ApplyBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyBreaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplyBreaker.Designer.cs">
+      <DependentUpon>ApplyBreaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplyMain.Designer.cs">
+      <DependentUpon>ApplyMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Area.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Area.Designer.cs">
+      <DependentUpon>Area.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BranchCircuits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BranchCircuits.Designer.cs">
+      <DependentUpon>BranchCircuits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConvenienceOutlet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConvenienceOutlet.Designer.cs">
+      <DependentUpon>ConvenienceOutlet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="Dryer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dryer.Designer.cs">
+      <DependentUpon>Dryer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DwellingMDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DwellingMDP.Designer.cs">
+      <DependentUpon>DwellingMDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DwellingShowMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DwellingShowMain.Designer.cs">
+      <DependentUpon>DwellingShowMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DwellingShowMainL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DwellingShowMainL.Designer.cs">
+      <DependentUpon>DwellingShowMainL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DwellingUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DwellingUnitForm.Designer.cs">
+      <DependentUpon>DwellingUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IlluminationCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IlluminationCalculation.Designer.cs">
+      <DependentUpon>IlluminationCalculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightingsForm.Designer.cs">
+      <DependentUpon>LightingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightingsForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightingsForm1.Designer.cs">
+      <DependentUpon>LightingsForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainDialogBox.Designer.cs">
+      <DependentUpon>MainDialogBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainVoltageDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainVoltageDrop.Designer.cs">
+      <DependentUpon>MainVoltageDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MotorLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MotorLoad.Designer.cs">
+      <DependentUpon>MotorLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewFileDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewFileDialogBox.Designer.cs">
+      <DependentUpon>NewFileDialogBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonDwellingACU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonDwellingACU.Designer.cs">
+      <DependentUpon>NonDwellingACU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonDwellingMDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonDwellingMDP.Designer.cs">
+      <DependentUpon>NonDwellingMDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Number_of_Lamps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Number_of_Lamps.Designer.cs">
+      <DependentUpon>Number_of_Lamps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Occupancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Occupancy.Designer.cs">
+      <DependentUpon>Occupancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherLoad.Designer.cs">
+      <DependentUpon>OtherLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PercentVoltageDrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PercentVoltageDrop.Designer.cs">
+      <DependentUpon>PercentVoltageDrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phase.Designer.cs">
+      <DependentUpon>Phase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RANGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RANGE.Designer.cs">
+      <DependentUpon>RANGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spacing_of_Light_Fixtures.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Spacing_of_Light_Fixtures.Designer.cs">
+      <DependentUpon>Spacing_of_Light_Fixtures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare.Designer.cs">
+      <DependentUpon>Spare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Unit.Designer.cs">
+      <DependentUpon>Unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voltage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voltage.Designer.cs">
+      <DependentUpon>Voltage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddTab.resx">
+      <DependentUpon>AddTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirCondition.resx">
+      <DependentUpon>AirCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplyBranch.resx">
+      <DependentUpon>ApplyBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplyBreaker.resx">
+      <DependentUpon>ApplyBreaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplyMain.resx">
+      <DependentUpon>ApplyMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Area.resx">
+      <DependentUpon>Area.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BranchCircuits.resx">
+      <DependentUpon>BranchCircuits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConvenienceOutlet.resx">
+      <DependentUpon>ConvenienceOutlet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dryer.resx">
+      <DependentUpon>Dryer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DwellingMDP.resx">
+      <DependentUpon>DwellingMDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DwellingShowMain.resx">
+      <DependentUpon>DwellingShowMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DwellingShowMainL.resx">
+      <DependentUpon>DwellingShowMainL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DwellingUnitForm.resx">
+      <DependentUpon>DwellingUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IlluminationCalculation.resx">
+      <DependentUpon>IlluminationCalculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightingsForm.resx">
+      <DependentUpon>LightingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightingsForm1.resx">
+      <DependentUpon>LightingsForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDialogBox.resx">
+      <DependentUpon>MainDialogBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainVoltageDrop.resx">
+      <DependentUpon>MainVoltageDrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotorLoad.resx">
+      <DependentUpon>MotorLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFileDialogBox.resx">
+      <DependentUpon>NewFileDialogBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonDwellingACU.resx">
+      <DependentUpon>NonDwellingACU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonDwellingMDP.resx">
+      <DependentUpon>NonDwellingMDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Number_of_Lamps.resx">
+      <DependentUpon>Number_of_Lamps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Occupancy.resx">
+      <DependentUpon>Occupancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherLoad.resx">
+      <DependentUpon>OtherLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PercentVoltageDrop.resx">
+      <DependentUpon>PercentVoltageDrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phase.resx">
+      <DependentUpon>Phase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RANGE.resx">
+      <DependentUpon>RANGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spacing_of_Light_Fixtures.resx">
+      <DependentUpon>Spacing_of_Light_Fixtures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare.resx">
+      <DependentUpon>Spare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Unit.resx">
+      <DependentUpon>Unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voltage.resx">
+      <DependentUpon>Voltage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TITLE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Button 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete row.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open icon 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARROW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CIRCUIT BREAKER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GROUND.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LEFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAIN POWER SOURCE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\METER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RIGHT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SINGLE PHASE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ICON.ico" />
+    <None Include="Resources\kisspng-electricity-distribution-board-electrical-wires-electrician-tools-5ad9a31608b5a7.png" />
+    <None Include="Resources\PinClipart.com_baby-grand-piano-clip_2161827.png" />
+    <None Include="Resources\outlet-147941_640.png" />
+    <None Include="Resources\electric-motor.png" />
+    <None Include="Resources\tumble-dry.png" />
+    <None Include="Resources\air-conditioner.png" />
+    <None Include="Resources\light-bulb.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
